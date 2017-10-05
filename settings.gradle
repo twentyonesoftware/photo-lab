@@ -1,0 +1,2 @@
+include ':photo-lab'
+project(':photo-lab').projectDir = new File('app')
