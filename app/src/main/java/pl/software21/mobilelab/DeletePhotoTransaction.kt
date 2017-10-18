@@ -7,7 +7,7 @@ class DeletePhotoTransaction(
 ) : Transaction {
 
     override fun execute() {
-        cart.removePhoto(id)
+        cart.remove(id)
     }
 
 }

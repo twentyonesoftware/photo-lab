@@ -8,7 +8,8 @@ class ChangePhotoPaperTransaction(
 ) : Transaction {
 
     override fun execute() {
-        cart.getPhoto(id)?.paper = paper
+        val photo = cart.getPhoto(id)
+        photo?.paper = paper
     }
 
 }

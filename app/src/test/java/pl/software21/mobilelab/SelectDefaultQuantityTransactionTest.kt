@@ -7,12 +7,12 @@ class SelectDefaultQuantityTransactionTest {
 
     @Test
     fun execute() {
-        val cart = Cart()
+        val cart = PhotoCart()
 
         val selectQuantityTransaction = SelectDefaultQuantityTransaction(10, cart)
         selectQuantityTransaction.execute()
 
-        assertEquals(10, cart.selectedQuantity)
+        assertEquals(10, cart.quantity)
     }
 
 }

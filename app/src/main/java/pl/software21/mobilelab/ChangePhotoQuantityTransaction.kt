@@ -4,7 +4,7 @@ package pl.software21.mobilelab
 class ChangePhotoQuantityTransaction(
         private val id: String,
         private val quantity: Int,
-        private val cart: Cart
+        private val cart: PhotoCart
 ) : Transaction {
 
     override fun execute() {

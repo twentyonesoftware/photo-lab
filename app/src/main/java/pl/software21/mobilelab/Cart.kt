@@ -1,29 +1,18 @@
 package pl.software21.mobilelab
 
 
-class Cart {
+abstract class Cart {
 
-    val photos = ArrayList<Photo>()
-    var selectedQuantity = 1
-    lateinit var selectedFormat: Format
-    lateinit var selectedPaper: Paper
+    lateinit var format: Format
+    lateinit var paper: Paper
+    var quantity = 1
 
-    fun addPhoto(id: String, uri: String) {
-        photos.add(Photo(id, uri, selectedQuantity, selectedFormat, selectedPaper))
-    }
+    abstract fun addPhoto(photo: Photo)
 
-    fun removePhoto(id: String) {
-        photos
-                .filter { it.id == id }
-                .forEach { photos.remove(it) }
-    }
+    abstract fun remove(id: String)
 
-    fun getPhoto(id: String): Photo? {
-        photos
-                .filter { it.id == id }
-                .forEach { return it }
+    abstract fun getPhoto(id: String): Photo?
 
-        return null
-    }
+    abstract fun getPhotos(): List<Photo>
 
 }

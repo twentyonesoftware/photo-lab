@@ -8,7 +8,8 @@ class AddPhotoTransaction(
 ) : Transaction {
 
     override fun execute() {
-        cart.addPhoto(idGenerator.generate(), uri)
+        val photo = Photo(idGenerator.generate(), uri, cart.quantity, cart.format, cart.paper)
+        cart.addPhoto(photo)
     }
 
 }

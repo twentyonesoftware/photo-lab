@@ -1,10 +1,13 @@
 package pl.software21.mobilelab
 
 
-class SelectDefaultPaperTransaction(private val paper: Paper, private val cart: Cart) : Transaction {
+class SelectDefaultPaperTransaction(
+        private val paper: Paper,
+        private val cart: PhotoCart
+) : Transaction {
 
     override fun execute() {
-        cart.selectedPaper = paper
+        cart.paper = paper
     }
 
 }

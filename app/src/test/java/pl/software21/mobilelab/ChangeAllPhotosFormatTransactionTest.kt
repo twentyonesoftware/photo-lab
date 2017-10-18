@@ -10,7 +10,7 @@ class ChangeAllPhotosFormatTransactionTest {
 
     private val format = Format()
     private val paper = Paper()
-    private val cart = Cart()
+    private val cart = PhotoCart()
     private val idGenerator: IdGenerator = mock()
 
     @Before

@@ -7,7 +7,7 @@ class ChangeAllPhotosPaperTransaction(
 ) : Transaction {
 
     override fun execute() {
-        for (photo in cart.photos) {
+        for (photo in cart.getPhotos()) {
             photo.paper = paper
         }
     }

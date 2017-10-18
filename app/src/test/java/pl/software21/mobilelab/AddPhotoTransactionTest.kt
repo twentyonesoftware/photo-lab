@@ -11,27 +11,31 @@ class AddPhotoTransactionTest {
 
     private val format = Format()
     private val paper = Paper()
-    private val cart = Cart()
+    private val cart = PhotoCart()
     private val idGenerator: IdGenerator = mock()
 
     @Before
     fun setUp() {
         SelectDefaultFormatTransaction(format, cart).execute()
         SelectDefaultPaperTransaction(paper, cart).execute()
-        whenever(idGenerator.generate()).thenReturn("id")
     }
 
     @Test
     fun execute() {
+        whenever(idGenerator.generate()).thenReturn("id")
+
         val addPhotoTransaction = AddPhotoTransaction("photoUri", cart, idGenerator)
         addPhotoTransaction.execute()
 
-        assertEquals(1, cart.photos.size)
-        assertEquals("id", cart.photos[0].id)
-        assertEquals("photoUri", cart.photos[0].uri)
-        assertEquals(1, cart.photos[0].quantity)
-        assertEquals(format, cart.photos[0].format)
-        assertEquals(paper, cart.photos[0].paper)
+        assertEquals(1, cart.getPhotos().size)
+
+        val photo = cart.getPhoto("id")
+
+        assertEquals("id", photo?.id)
+        assertEquals("photoUri", photo?.uri)
+        assertEquals(1, photo?.quantity)
+        assertEquals(format, photo?.format)
+        assertEquals(paper, photo?.paper)
     }
 
 }

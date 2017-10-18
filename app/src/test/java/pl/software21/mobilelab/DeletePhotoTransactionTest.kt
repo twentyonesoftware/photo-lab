@@ -11,7 +11,7 @@ class DeletePhotoTransactionTest {
 
     private val format = Format()
     private val paper = Paper()
-    private val cart = Cart()
+    private val cart = PhotoCart()
     private val idGenerator: IdGenerator = mock()
 
     @Before
@@ -24,10 +24,10 @@ class DeletePhotoTransactionTest {
     @Test
     fun execute() {
         AddPhotoTransaction("photoUri", cart, idGenerator).execute()
-        assertEquals(1, cart.photos.size)
+        assertEquals(1, cart.getPhotos().size)
 
         DeletePhotoTransaction("id", cart).execute()
-        assertEquals(0, cart.photos.size)
+        assertEquals(0, cart.getPhotos().size)
     }
 
 }

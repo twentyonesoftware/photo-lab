@@ -8,12 +8,12 @@ class SelectDefaultPaperTransactionTest {
     @Test
     fun execute() {
         val paper = Paper()
-        val cart = Cart()
+        val cart = PhotoCart()
 
         val selectPaperTransaction = SelectDefaultPaperTransaction(paper, cart)
         selectPaperTransaction.execute()
 
-        assertEquals(paper, cart.selectedPaper)
+        assertEquals(paper, cart.paper)
     }
 
 }

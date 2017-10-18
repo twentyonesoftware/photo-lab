@@ -8,12 +8,12 @@ class SelectDefaultFormatTransactionTest {
     @Test
     fun execute() {
         val format = Format()
-        val cart = Cart()
+        val cart = PhotoCart()
 
         val selectFormatTransaction = SelectDefaultFormatTransaction(format, cart)
         selectFormatTransaction.execute()
 
-        assertEquals(format, cart.selectedFormat)
+        assertEquals(format, cart.format)
     }
 
 }

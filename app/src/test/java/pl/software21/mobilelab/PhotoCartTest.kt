@@ -6,11 +6,11 @@ import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 
-class CartTest {
+class PhotoCartTest {
 
     private val format = Format()
     private val paper = Paper()
-    private val cart = Cart()
+    private val cart = PhotoCart()
     private val idGenerator: IdGenerator = mock()
 
     @Before
