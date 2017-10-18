@@ -11,5 +11,4 @@ class ChangeAllPhotosPaperTransaction(
             photo.paper = paper
         }
     }
-
 }

@@ -10,5 +10,4 @@ class ChangePhotoQuantityTransaction(
     override fun execute() {
         cart.getPhoto(id)?.quantity = quantity
     }
-
 }

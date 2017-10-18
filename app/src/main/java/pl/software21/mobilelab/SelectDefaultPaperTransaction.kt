@@ -9,5 +9,4 @@ class SelectDefaultPaperTransaction(
     override fun execute() {
         cart.paper = paper
     }
-
 }

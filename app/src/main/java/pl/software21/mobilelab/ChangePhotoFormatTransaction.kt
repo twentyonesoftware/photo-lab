@@ -10,5 +10,4 @@ class ChangePhotoFormatTransaction(
     override fun execute() {
         cart.getPhoto(id)?.format = format
     }
-
 }

@@ -11,5 +11,4 @@ class ChangePhotoPaperTransaction(
         val photo = cart.getPhoto(id)
         photo?.paper = paper
     }
-
 }

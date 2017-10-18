@@ -9,5 +9,4 @@ class DeletePhotoTransaction(
     override fun execute() {
         cart.remove(id)
     }
-
 }

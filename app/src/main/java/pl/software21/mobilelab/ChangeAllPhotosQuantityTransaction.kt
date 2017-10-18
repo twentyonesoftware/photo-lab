@@ -11,5 +11,4 @@ class ChangeAllPhotosQuantityTransaction(
             photo.quantity = quantity
         }
     }
-
 }

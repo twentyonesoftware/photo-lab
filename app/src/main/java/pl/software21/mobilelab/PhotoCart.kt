@@ -16,5 +16,4 @@ class PhotoCart: Cart() {
     override fun getPhoto(id: String): Photo? = photos[id]
 
     override fun getPhotos(): List<Photo> = photos.values.toList()
-
 }

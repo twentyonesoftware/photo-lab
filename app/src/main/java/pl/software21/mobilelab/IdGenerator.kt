@@ -6,5 +6,4 @@ package pl.software21.mobilelab
 interface IdGenerator {
 
     fun generate(): String
-
 }

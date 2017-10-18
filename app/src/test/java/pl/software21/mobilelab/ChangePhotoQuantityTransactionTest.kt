@@ -33,5 +33,4 @@ class ChangePhotoQuantityTransactionTest {
         assertEquals(10, cart.getPhoto("id")?.quantity)
         assertEquals(3, cart.getPhoto("id2")?.quantity)
     }
-
 }

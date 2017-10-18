@@ -14,5 +14,4 @@ abstract class Cart {
     abstract fun getPhoto(id: String): Photo?
 
     abstract fun getPhotos(): List<Photo>
-
 }

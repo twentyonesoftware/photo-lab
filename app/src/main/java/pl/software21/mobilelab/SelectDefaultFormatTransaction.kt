@@ -9,5 +9,4 @@ class SelectDefaultFormatTransaction(
     override fun execute() {
         cart.format = format
     }
-
 }

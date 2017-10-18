@@ -24,5 +24,4 @@ interface CartTransactionFactory {
     fun getSelectDefaultPaperTransaction(paper: Paper): Transaction
 
     fun getSelectDefaultQuantityTransaction(quantity: Int): Transaction
-
 }

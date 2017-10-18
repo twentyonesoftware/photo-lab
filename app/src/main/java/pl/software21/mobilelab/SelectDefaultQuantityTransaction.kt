@@ -9,5 +9,4 @@ class SelectDefaultQuantityTransaction(
     override fun execute() {
         cart.quantity = quantity
     }
-
 }
