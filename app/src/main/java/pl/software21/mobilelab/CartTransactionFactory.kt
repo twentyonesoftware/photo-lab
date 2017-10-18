@@ -3,7 +3,7 @@ package pl.software21.mobilelab
 
 interface CartTransactionFactory {
 
-    fun getAddPhotoTransaction(id: String, uri: String): Transaction
+    fun getAddPhotoTransaction(uri: String): Transaction
 
     fun getDeletePhotoTransaction(id: String): Transaction
 
